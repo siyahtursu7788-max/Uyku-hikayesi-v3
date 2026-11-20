@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-11-19T19:47:51.934656+00:00",
+  "file_count": 67,
+  "files": {
+    "V3_Colab_T4_Uretim.ipynb": {
+      "size_bytes": 5082,
+      "sha256": "de02363db0339446ca3b40db1ecb42e7970c758479e94aeaa74eabbe88e6e982"
+    },
+    "colab/cell_1_kurulum_ve_hazirlik.py": {
+      "size_bytes": 2065,
+      "sha256": "5634aab914dc9509cc1213c8988b50de68e44b1b292c0fd05383cc11a9863989"
+    },
+    "colab/cell_2_uretim_baslat_veya_devam.py": {
+      "size_bytes": 1133,
+      "sha256": "66f1a620b62f54e0c63ad80e8e116fe51a99ba9d005796821ef80cedf9b1205c"
+    },
+    "config_v3_production.json": {
+      "size_bytes": 2231,
+      "sha256": "7dbf4a75e055f605402a6b3e3902d648a6de4e452683c97b0bf87116116eddc6"
+    },
+    "docs/ESKI_DOSYA_ENVANTERI_VE_SILME_ONAY_LISTESI.md": {
+      "size_bytes": 6405,
+      "sha256": "09ea42c64ca3dc6f1a4fb66e4cadd54584f8c6af37f9234d1ebab102ea3aeabf"
+    },
+    "docs/TEST_RAPORU_V3.json": {
+      "size_bytes": 15070,
+      "sha256": "83fe40465146f0b3be3ce471901a0cc86a673965e8e444ac8162cce2c09d8b2f"
+    },
+    "docs/V3_KULLANIM_KILAVUZU.md": {
+      "size_bytes": 2359,
+      "sha256": "2cbf8cf829a41dfe95d5a9eeb24b411c0bd0308c460d24600533f0b57c55678a"
+    },
+    "docs/V3_TEKNIK_MIMARI.md": {
+      "size_bytes": 5481,
+      "sha256": "f21b6620ce97895d33278aa8ad1246a437f72729f780ba7add4a10a50d53bd06"
+    },
+    "requirements_v3_colab_py313.txt": {
+      "size_bytes": 553,
+      "sha256": "490aa1ab61c44cb4f2219768bf5d9dd918539ce2f40974e0debb14090e50e33e"
+    },
+    "uyku_v3/__init__.py": {
+      "size_bytes": 156,
+      "sha256": "a262913ae2e47d8f1ed14c8c46748f09641660fa68eb932ead474c3732d02dba"
+    },
+    "uyku_v3/ambience/__init__.py": {
+      "size_bytes": 125,
+      "sha256": "870f2eec149e64e9f031503d5ed1162a9289884ede94779579e0e18399dd3f8e"
+    },
+    "uyku_v3/ambience/audioldm_engine.py": {
+      "size_bytes": 12285,
+      "sha256": "fdd2c10a80e679cb1c01b2be54fe34095b368165865aec785b1a9944fc062d5a"
+    },
+    "uyku_v3/assembly/__init__.py": {
+      "size_bytes": 582,
+      "sha256": "b95184598d94180bf9f343eaaa79895506a93819a5b8588c3885bb4505ea4613"
+    },
+    "uyku_v3/assembly/ffmpeg_engine.py": {
+      "size_bytes": 6728,
+      "sha256": "a7d95e2ca0af623abbcd8a5e25dcdb8837a9b9dc69d2e8ba37ffa437d2162443"
+    },
+    "uyku_v3/assembly/final_export.py": {
+      "size_bytes": 1502,
+      "sha256": "cf562816bbd58609d6a5618f35ca87e70b6f66503c3011104881df176a9ea7c2"
+    },
+    "uyku_v3/assembly/sync_validator.py": {
+      "size_bytes": 4145,
+      "sha256": "11ed9c9c31e3632816564a27aac67f6d83b59b4e70c5bae1e003010e804aa9b5"
+    },
+    "uyku_v3/assembly/timeline.py": {
+      "size_bytes": 2305,
+      "sha256": "9c087387b2fed3760d6dc7bf2e4e32720d94329884d30274a95f8b90830e5fc2"
+    },
+    "uyku_v3/audio/__init__.py": {
+      "size_bytes": 1229,
+      "sha256": "83799aabf3825d1e5e7ddfb649e5cc36829f909e26256e2431f6b15818644f77"
+    },
+    "uyku_v3/audio/audio_quality.py": {
+      "size_bytes": 10098,
+      "sha256": "e9de9d955a81aa3b7ecb0255450fa5506e0c5093133cf8bae5cbaf556ac6c688"
+    },
+    "uyku_v3/audio/mastering.py": {
+      "size_bytes": 8253,
+      "sha256": "90f1cfe039843f2f996df6f15c048207da7f9d453b4260f663cc48371787146b"
+    },
+    "uyku_v3/audio/pronunciation_dictionary.py": {
+      "size_bytes": 3298,
+      "sha256": "13cb422b48dd252338318f190cf475f6e78f47269fd2292fbb29f90430a6dd75"
+    },
+    "uyku_v3/audio/sentence_cache.py": {
+      "size_bytes": 4663,
+      "sha256": "dd07a210783ec7a29e01b7445d0e05f0ea1566a7a9d2c3963d75a31c203e4b55"
+    },
+    "uyku_v3/audio/text_normalizer.py": {
+      "size_bytes": 11518,
+      "sha256": "d57dd93ec19ded0ba0c3dc94fafbcf44c7966a76fe3b15ff2f28ebc4816b23a0"
+    },
+    "uyku_v3/audio/whisper_validator.py": {
+      "size_bytes": 13985,
+      "sha256": "ad46e000d0a8a1eec8be098a7c375ce2757ef3a1bf29ad5ea814102490a7c30d"
+    },
+    "uyku_v3/audio/xtts_engine.py": {
+      "size_bytes": 23789,
+      "sha256": "f79ca244a5f2358db97c27c812a4775e902993c8f18b6812aa39be90bc88f7bf"
+    },
+    "uyku_v3/config/__init__.py": {
+      "size_bytes": 652,
+      "sha256": "d9fd143bd7d6b1c71e182b6feb9c1f2be64ab840e83c71bcd99043ed49d265a5"
+    },
+    "uyku_v3/config/model_config.py": {
+      "size_bytes": 5004,
+      "sha256": "824b9787e51db78f7d52b40cbc22cb8c0e34ac0bd8f6d442fc05163cb11496a0"
+    },
+    "uyku_v3/config/quality_thresholds.py": {
+      "size_bytes": 3053,
+      "sha256": "005231ef83fad97675eb92aea867c079ef15a5778c0b5b440e9e425301e0c822"
+    },
+    "uyku_v3/config/settings.py": {
+      "size_bytes": 5795,
+      "sha256": "9994231726543aa6ba4cbbba7fce697bbd4f528db2e8e9c0a67b9eb0599e010d"
+    },
+    "uyku_v3/core/__init__.py": {
+      "size_bytes": 659,
+      "sha256": "0abfa4e1ce57c805f47c06cfe744b4b93699cad9b0cc5a3dcf93a3dd90c0238d"
+    },
+    "uyku_v3/core/file_manager.py": {
+      "size_bytes": 4163,
+      "sha256": "786dc14910375a6a5bf19105ea21951d759fe13044d6357ab9efba6c74853c1d"
+    },
+    "uyku_v3/core/logging_system.py": {
+      "size_bytes": 2310,
+      "sha256": "147f7d284b84ff8d0a6b2405ca280f971b770ce61f518c639df051f72a0c3849"
+    },
+    "uyku_v3/core/manifest.py": {
+      "size_bytes": 9048,
+      "sha256": "b6f485c10e03671e22a9b9084c995de1bf7f4a74c75ffe8f0b18679e582273fe"
+    },
+    "uyku_v3/core/protection.py": {
+      "size_bytes": 1889,
+      "sha256": "ae114d859565108fed57dad35ad1f27b418ec9c222bb86e59efb5f42b1ae0b56"
+    },
+    "uyku_v3/core/recovery.py": {
+      "size_bytes": 4212,
+      "sha256": "c56e696b899401ad7ffb35202777cf289c1f38d51abaf26286555881c8f08262"
+    },
+    "uyku_v3/core/resource_monitor.py": {
+      "size_bytes": 2637,
+      "sha256": "04e0b4b3f985dc49d4309a3831e1a90c14d5f48535c11ff4c2a2b7b09d324c2c"
+    },
+    "uyku_v3/core/state_manager.py": {
+      "size_bytes": 3610,
+      "sha256": "53d4c9175b9325e1420055d04167440c2d0cdbbe6f5b557e67e35445704cffc6"
+    },
+    "uyku_v3/core/v3_cache.py": {
+      "size_bytes": 4176,
+      "sha256": "21fe5eabf303f42ef7d01c00291d26239ffaac35e83ac3e044cf67d472898364"
+    },
+    "uyku_v3/main.py": {
+      "size_bytes": 4079,
+      "sha256": "9af59667cf54556b2f7202a41bb47c5ef3dc678bba3dd2b6eff18a26cd0ff338"
+    },
+    "uyku_v3/reports/TEST_SONUCLARI_RAPORU.md": {
+      "size_bytes": 9087,
+      "sha256": "d41c7b31c10a4cb126b842fe9cbb8e8bb4fc4fc76a4e110276899d0b5e38ea95"
+    },
+    "uyku_v3/reports/quality_report.py": {
+      "size_bytes": 6465,
+      "sha256": "94e88ec3bdc393d4c5c79f1fc956a1aec57a99660271d888615256ae932ff316"
+    },
+    "uyku_v3/requirements.txt": {
+      "size_bytes": 552,
+      "sha256": "b208a770a547b9cf34b42d819e5de26e38521fcb67e9e76aa0b79c1e849eb24e"
+    },
+    "uyku_v3/subtitles/__init__.py": {
+      "size_bytes": 593,
+      "sha256": "424aaccb2a236db22ceaa15a81ae725f33dd48c5288c90ebeab1b3caa90996c0"
+    },
+    "uyku_v3/subtitles/alignment.py": {
+      "size_bytes": 4233,
+      "sha256": "5971da1ce2fc0e490e33f9e8e6f9cffd2a30082e23753965e43cc0736c4b0d8d"
+    },
+    "uyku_v3/subtitles/srt_generator.py": {
+      "size_bytes": 5711,
+      "sha256": "23217c7ba2074e0d1065da3047fb334c77c3a55be8e6c96eb09ac61102ac8c8c"
+    },
+    "uyku_v3/subtitles/srt_validator.py": {
+      "size_bytes": 5865,
+      "sha256": "b54d3136ac82b4a42313bf6806a96a0b37611ad07b2bd1dda2746c9e938c3d3e"
+    },
+    "uyku_v3/subtitles/transcription.py": {
+      "size_bytes": 2146,
+      "sha256": "cfc28785cea86d586f7f4d949d24fafc7b6fd59e43f5361cc78eb9af1754c600"
+    },
+    "uyku_v3/tests/run_all_tests.py": {
+      "size_bytes": 5300,
+      "sha256": "3608ec4892bca416444dafed024e0978dfd8f7325085d7ee74c1f623780bff9a"
+    },
+    "uyku_v3/tests/test_audio.py": {
+      "size_bytes": 13322,
+      "sha256": "0b917812037b9bc24157603bf61ec5e54ca6bc50fe6b64653c76a9b3ff70da4e"
+    },
+    "uyku_v3/tests/test_pipeline.py": {
+      "size_bytes": 11433,
+      "sha256": "c8f7e58d6ef4819806bb71e6d0d4594b7c5000de6e5c525bbff9feea99e8873b"
+    },
+    "uyku_v3/tests/test_recovery.py": {
+      "size_bytes": 5275,
+      "sha256": "c37820f43a6b28d14e89b8ecfc6cc3a1e73bc0313eb393363e2ea8e777022e0a"
+    },
+    "uyku_v3/tests/test_subtitles.py": {
+      "size_bytes": 4801,
+      "sha256": "d36d877cef12acc2386bfb78487995b937b7b9f74e4c41aa76b700c5ef98a568"
+    },
+    "uyku_v3/tests/test_v2_2.py": {
+      "size_bytes": 15980,
+      "sha256": "4aef02c134fce6ccc14217f112b642b9c65e99731c8f886b96a400ca34e26571"
+    },
+    "uyku_v3/tests/test_v3_platform.py": {
+      "size_bytes": 14933,
+      "sha256": "97fc665c241a8bab414b8ed81724b76bafc2d1b821f7c16f704e5f2e810d2362"
+    },
+    "uyku_v3/tests/test_video.py": {
+      "size_bytes": 9309,
+      "sha256": "41a60c4b6bfdd872cf06dc97f9f1008afab1243478de6b9f4367afdbfaa7185b"
+    },
+    "uyku_v3/video/__init__.py": {
+      "size_bytes": 724,
+      "sha256": "4d2bdd5a00bff2c3aaecf6119d4e4f677b9d207a2821d3fa46015f2126e709d4"
+    },
+    "uyku_v3/video/clip_validator.py": {
+      "size_bytes": 5652,
+      "sha256": "40eda2e79922253b410fa1c3ff137226ce5874147fafe648f37f148e21ca2145"
+    },
+    "uyku_v3/video/loop_engine.py": {
+      "size_bytes": 5705,
+      "sha256": "14ac743ad844338a5796e37d667d97af80735fcff16b4edd7a0bdf3dbaf933f3"
+    },
+    "uyku_v3/video/motion_validator.py": {
+      "size_bytes": 5989,
+      "sha256": "116dca1b0d78350f5343d94251547ede6b9bef0c5647602ecdef828ff04bf299"
+    },
+    "uyku_v3/video/svd_engine.py": {
+      "size_bytes": 8170,
+      "sha256": "81b67a5f9d48b591358354bf259ac67a6d70c7faa97c8eb2caa95c5a17d1d725"
+    },
+    "uyku_v3/video/video_validator.py": {
+      "size_bytes": 4339,
+      "sha256": "1db401bfac240f16b87906931f0d2aaab82b1c6d7341ed458faf5a51e1ffaced"
+    },
+    "uyku_v3/visuals/__init__.py": {
+      "size_bytes": 297,
+      "sha256": "190954c6c035ed85964ebd6675d4d8f2abe23fee2d50be76f0969b971092e904"
+    },
+    "uyku_v3/visuals/continuity_manager.py": {
+      "size_bytes": 5258,
+      "sha256": "bfc875f7ecb32c551403a0ea893a9e8cf6e937302110650098873de5c690f738"
+    },
+    "uyku_v3/visuals/image_generator.py": {
+      "size_bytes": 4433,
+      "sha256": "19211e25f43fd140a123cace54662fc22c2d4e7161eba47b4bb3079e835a655b"
+    },
+    "uyku_v3/visuals/image_validator.py": {
+      "size_bytes": 3132,
+      "sha256": "b98f6d696f99e302e29e876aad1e1d4b270698417d8ad538d3888fefb5500bf7"
+    },
+    "uyku_v3/visuals/scene_manager.py": {
+      "size_bytes": 1794,
+      "sha256": "a5f8bc107407b2ed2f7ce03e4f395a8140096914038fc5ec96a177c417622486"
+    },
+    "v3_runner.py": {
+      "size_bytes": 21124,
+      "sha256": "8279a65a41d819484c52b550319aff7b97ac668b2b304934e427f9a1bc745ca1"
+    }
+  }
+}

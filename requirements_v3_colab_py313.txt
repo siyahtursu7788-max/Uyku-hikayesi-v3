@@ -1,0 +1,18 @@
+# UYKU_HIKAYESI_V3_FINAL_PRODUCTION — Google Colab Pro (T4 GPU / Python 3.13) Bağımlılıkları
+# NOT: Colab'ın kurulu CUDA PyTorch sürümünü EZMEMEK için torch/torchaudio sabitlenmez.
+# Kurulum komutu: pip install -q --upgrade-strategy only-if-needed -r requirements_v3_colab_py313.txt
+
+openai-whisper>=20240930
+coqui-tts>=0.25.0
+pyloudnorm>=0.1.1
+pydub>=0.25.1
+soundfile>=0.12.1
+scipy>=1.11.0
+numpy>=1.26.0
+pillow>=10.0.0
+opencv-python-headless>=4.9.0
+diffusers>=0.31.0
+transformers>=4.46.0
+accelerate>=1.1.0
+safetensors>=0.4.3
+psutil>=5.9.0

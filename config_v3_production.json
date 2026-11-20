@@ -1,0 +1,75 @@
+{
+  "schema_version": "3.0.0",
+  "platform_name": "UYKU_HIKAYESI_V3_FINAL_PRODUCTION",
+  "target_hardware": "Google Colab Pro NVIDIA T4 (15GB VRAM)",
+  "paths": {
+    "drive_v3_root": "/content/drive/MyDrive/UYKU_HIKAYESI_V3_FINAL_PRODUCTION",
+    "drive_studio_dir": "/content/drive/MyDrive/Unutulmus_Zamanlar_Arsivi_Studyo",
+    "default_script": "/content/drive/MyDrive/Unutulmus_Zamanlar_Arsivi_Studyo/Unutulmus_Zamanlar_Arsivi_Final_v2.txt",
+    "default_ref_audio": "/content/drive/MyDrive/Unutulmus_Zamanlar_Arsivi_Studyo/referans_ses_15sn.wav",
+    "local_ssd_work": "/content/uyku_v3_work"
+  },
+  "voice": {
+    "engine": "xtts_v2",
+    "model_name": "tts_models/multilingual/multi-dataset/xtts_v2",
+    "sample_rate": 24000,
+    "gpt_cond_len": 16,
+    "gpt_cond_chunk_len": 6,
+    "max_ref_len": 18,
+    "speed": 0.84,
+    "temperature": 0.22,
+    "repetition_penalty": 10.0,
+    "top_k": 20,
+    "top_p": 0.65,
+    "max_attempts": 4,
+    "proper_noun_auto_approve": false,
+    "known_proper_nouns": ["Arin", "Liora", "Liyora", "Elias", "Eliyas", "Artur", "Vens"]
+  },
+  "whisper": {
+    "model_name": "turbo",
+    "language": "tr",
+    "fp16": true,
+    "word_timestamps": true
+  },
+  "visuals": {
+    "primary_model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "use_imagen3_if_api_key": true,
+    "width": 1920,
+    "height": 1080,
+    "steps": 28,
+    "guidance_scale": 7.0,
+    "enable_attention_slicing": true,
+    "enable_vae_tiling": true,
+    "enable_cpu_offload": true
+  },
+  "video_i2v": {
+    "model_name": "stabilityai/stable-video-diffusion-img2vid-xt",
+    "variant": "fp16",
+    "width": 1024,
+    "height": 576,
+    "num_frames": 25,
+    "decode_chunk_size": 4,
+    "fps": 7,
+    "enable_cpu_offload": true,
+    "max_retries": 3,
+    "clip_min_positive_cos": 0.22,
+    "clip_max_negative_cos": 0.24,
+    "clip_min_margin": 0.03
+  },
+  "ambience": {
+    "model_name": "cvssp/audioldm-s-full-v2",
+    "default_bed_db": -35.0,
+    "interlude_boost_db": 2.8,
+    "outro_duration_sec": 160.0,
+    "outro_fade_out_sec": 40.0
+  },
+  "assembly": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "ffmpeg_threads": 2,
+    "crf": 20,
+    "preset": "veryfast",
+    "max_av_sync_diff_sec": 0.35
+  }
+}

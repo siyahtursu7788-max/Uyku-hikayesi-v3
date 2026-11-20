@@ -1,0 +1,16 @@
+# UYKU_BORU_HATTI_V2 — Test Edilmiş ve Sabitlenmiş Colab Pro (T4 GPU) Bağımlılıkları
+# NOT: Colab'ın mevcut CUDA PyTorch kurulumunu EZMEMEK için torch/torchaudio burada sabitlenmez;
+# yalnızca pip install --upgrade-strategy only-if-needed ile eksik paketler kurulur.
+openai-whisper==20240930
+coqui-tts==0.25.1
+pyloudnorm==0.1.1
+pydub==0.25.1
+soundfile==0.12.1
+scipy>=1.11.0,<1.15.0
+numpy>=1.24.0,<2.1.0
+pillow>=10.0.0,<11.1.0
+opencv-python-headless>=4.9.0,<4.11.0
+diffusers==0.31.0
+transformers==4.46.3
+accelerate==1.1.1
+safetensors>=0.4.3

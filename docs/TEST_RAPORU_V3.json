@@ -1,0 +1,370 @@
+{
+  "schema_version": "3.0.0",
+  "generated_at": "2026-11-19T19:47:51.930050+00:00",
+  "environment": "Local CPU Sandbox (Python 3.11.2, FFmpeg, OpenCV, NumPy/SciPy) — NO NVIDIA T4 GPU",
+  "exit_code": 0,
+  "total_tests": 57,
+  "passed_tests": 57,
+  "failed_tests": 0,
+  "elapsed_sec": 161.05,
+  "counts_by_mode": {
+    "REAL_LOCAL": 43,
+    "REAL_LOCAL_FFMPEG_30MIN": 1,
+    "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL": 5,
+    "SIMULATED_GPU": 8
+  },
+  "untested_live_t4_components": [
+    "Live Colab T4 XTTS-v2 Turkish synthesis (measured separately in V2.2 10p run, not yet re-run via v3_runner.py)",
+    "Live Colab T4 Whisper Turbo transcription",
+    "Live Colab T4 SDXL 1.0 / Imagen 3 image generation",
+    "Live Colab T4 SVD-XT Image-to-Video inference",
+    "Live Colab T4 AudioLDM ambience generation",
+    "Live Colab T4 CLIP cosine validation",
+    "Live Colab T4 30/60-minute GPU endurance run"
+  ],
+  "tests": [
+    {
+      "test": "test_01_single_sentence_xtts_simulated_gpu",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] Tek cümle XTTS üretim + 3 aşamalı QC testi. ... ok"
+    },
+    {
+      "test": "test_02_turkish_proper_noun_pronunciation_dict",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Türkçe özel isim (Arin, Liora, Elias) ve kelime-sınırı güvenliği testi. ... ok"
+    },
+    {
+      "test": "test_03_number_date_and_turkish_i_normalization",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Sayı, sıra sayısı, tarih ve Türkçe İ/I normalizasyon testi. ... ok"
+    },
+    {
+      "test": "test_04_missing_word_detection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Eksik kelime tespiti testi. ... ok"
+    },
+    {
+      "test": "test_05_extra_word_detection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Fazladan kelime/halüsinasyon tespiti testi. ... ok"
+    },
+    {
+      "test": "test_06_sentence_end_tail_cut_detection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Cümle sonu fiil hecesi düşmesi ve ani kesilme testi. ... ok"
+    },
+    {
+      "test": "test_07_whisper_misrecognition_vs_audio_error",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Whisper özel isim yanlış tanıma vs gerçek ses hatası ayrımı testi. ... ok"
+    },
+    {
+      "test": "test_08_low_paragraph_completeness_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Düşük paragraf tamlık skoru (eski sistemdeki 0.075/0.15 hatası) kesinlikle reddedilmeli. ... ok"
+    },
+    {
+      "test": "test_09_loudness_clipping_and_true_peak_mastering",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Clipping tespiti ve -2.5 dBTP True Peak mastering koruması testi. ... ok"
+    },
+    {
+      "test": "test_10_v21_real_missing_word_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Gerçek eksik kelimeler (yün, palto) kesinlikle reddedilmeli. ... ok"
+    },
+    {
+      "test": "test_11_v21_wrong_last_word_and_turkish_suffix_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Yanlış son kelime (et->etmiyor, kapanmaz->kapanmazlığa, kuşlar->var) reddedilmeli. ... ok"
+    },
+    {
+      "test": "test_12_v21_short_sentence_natural_vs_rushed_wpm",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Kısa cümle doğal hızda onaylanmalı, gerçek hızlı/kesik okuma reddedilmeli. ... ok"
+    },
+    {
+      "test": "test_13_v21_long_sentence_fast_speech_still_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Uzun cümlede (9 kelime) 165 WPM gerçek hızlı konuşma hala reddedilmeli (145 WPM korunmalı). ... ok"
+    },
+    {
+      "test": "test_14_v21_compound_word_split_normalized_without_hiding_missing",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Birleşik kelime bölünmesi (başparmağıyla / baş parmağıyla) normalize edilmeli; gerçek eksik kelime gizlenmemeli. ... ok"
+    },
+    {
+      "test": "test_15_v21_cer_low_non_proper_not_auto_approved_and_proper_noun_manual",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] CER <= 0.05 genel yazım farkı otomatik onaylanmamalı; özel isim farkı MANUAL_REVIEW kalmalı. ... ok"
+    },
+    {
+      "test": "test_16_v21_manual_review_preserves_raw_audio",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] MANUAL_REVIEW durumuna düşen cümlede ham XTTS sesi korunmalı. ... ok"
+    },
+    {
+      "test": "test_22_corrupt_mp4_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Bozuk MP4 dosyası ffprobe + decode kontrolünden geçememeli. ... ok"
+    },
+    {
+      "test": "test_23_missing_scene_blocks_assembly",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Eksik sahne varsa FFmpeg montajı başlamadan hata vermeli. ... ok"
+    },
+    {
+      "test": "test_24_25_34_black_screen_av_sync_and_full_decode",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Saf #000000 siyah ekran, ses-video senkronu ve tam akış decode testi. ... ok"
+    },
+    {
+      "test": "test_e2e_small_turkish_sleep_story_pipeline",
+      "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+      "passed": true,
+      "summary": "[E2E_INTEGRATION: REAL_LOCAL_DSP_FFMPEG + SIMULATED_GPU_MODELS] ... ok"
+    },
+    {
+      "test": "test_29_colab_session_interruption_recovery",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Colab oturumu GENERATING sırasında kesildiğinde dosya karantinaya alınır ve INTERRUPTED olur. ... ok"
+    },
+    {
+      "test": "test_30_drive_disconnect_resilience_atomic_copy",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Drive kopyalamasında geçici I/O hatası sonrası yeniden deneme ve veri kaybı olmaması. ... ok"
+    },
+    {
+      "test": "test_31_partial_tmp_file_quarantined",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Yarım kalmış .tmp dosyaları kurtarma sırasında karantinaya taşınır. ... ok"
+    },
+    {
+      "test": "test_32_corrupt_manifest_recovery",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Bozuk JSON manifest dosyası yedeğe alınıp sistem çökmeden yeniden başlar. ... ok"
+    },
+    {
+      "test": "test_33_rerun_preserves_approved_and_invalidates_on_source_change",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Yeniden çalıştırmada geçerli APPROVED çıktılar korunur; kaynak metin değişirse geçersizleşir. ... ok"
+    },
+    {
+      "test": "test_26_srt_missing_word_flagged_for_manual_review",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Ortadaki kelimeleri eksik cümle ilk/son kelime tutsa bile MANUAL_REVIEW olmalı. ... ok"
+    },
+    {
+      "test": "test_27_srt_overlap_prevented_and_detected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] SRT zaman çakışması üretimde engellenir ve bağımsız doğrulayıcı çakışmayı yakalar. ... ok"
+    },
+    {
+      "test": "test_28_srt_turkish_characters_and_no_truncation_and_ms_rounding",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Türkçe karakterler (çğıöşüİ), 42 karakter x 2 satır kelime kayıpsız bölme ve ms=1000 engeli. ... ok"
+    },
+    {
+      "test": "test_01_sentence_cache_sha256_and_corrupt_rejection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Cümle önbelleği SHA-256 doğrulaması ve bozuk dosya reddi. ... ok"
+    },
+    {
+      "test": "test_02_long_sentence_comma_breath_split_preserves_original",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] 9+ kelimelik virgüllü cümle iki nefes grubuna bölünür; orijinal metin değişmez. ... ok"
+    },
+    {
+      "test": "test_03_controlled_atempo_only_on_zero_wer_fast_wpm",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] Kontrollü atempo yalnızca WER=0, CER=0 hızlı cümlede çalışır; telaffuz hatasını gizlemez. ... ok"
+    },
+    {
+      "test": "test_04_adaptive_retry_profiles_switch_and_fail_closed",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] Son hece hatasında uyarlanabilir profillere geçer; 4 deneme başarısızsa MANUAL_REVIEW kalır. ... ok"
+    },
+    {
+      "test": "test_05_proper_noun_still_manual_review_excluded",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] #5 kuralı gereği özel isim farkı otomatik APPROVED yapılmaz, MANUAL_REVIEW kalır. ... ok"
+    },
+    {
+      "test": "test_06_interruption_resume_reuses_cached_approved",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Kesinti sonrası devamda onaylı cümleler önbellekten gelir, yeniden üretilmez. ... ok"
+    },
+    {
+      "test": "test_07_validating_interruption_safe_transition",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Regresyon 1: VALIDATING durumunda kesinti -> INTERRUPTED -> PENDING -> GENERATING. ... ok"
+    },
+    {
+      "test": "test_08_profile_stats_excludes_needs_manual_review",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] Regresyon 3: Özel isim vakasında passed=True, needs_manual_review=True profil başarısı sayılmamalı. ... ok"
+    },
+    {
+      "test": "test_09_cache_invalidates_on_xtts_config_or_threshold_change",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Regresyon 4: XTTSConfig veya AudioThresholds değiştiğinde cümle önbelleği geçersizleşmeli. ... ok"
+    },
+    {
+      "test": "test_10_two_run_interruption_resume_and_cumulative_10p_metrics",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Regresyon 2: 10 paragrafta 3 paragraf sonrası kesinti + 2. çalıştırmada önbellek ve kümülatif metrikler. ... ok"
+    },
+    {
+      "test": "test_v3_01_six_factor_cache_and_fail_closed",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] 6 faktörlü SHA-256 önbellek isabeti, geçersizleştirme ve bozulma reddi. ... ok"
+    },
+    {
+      "test": "test_v3_02_profile_success_stats_root_cause_fixed",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] xtts_engine history alanında needs_manual_review kaydedilir ve passes doğru sayılır. ... ERROR"
+    },
+    {
+      "test": "test_v3_03_legacy_protection_guard_per_file_sha256",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Tekil dosya SHA-256 koruma bekçisi değişikliği yakalar. ... ok"
+    },
+    {
+      "test": "test_v3_04_audioldm_ambience_catalog_and_timeline",
+      "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL_DSP+SIMULATED_AUDIOLDM] 10 ambiyans profili, kesintisiz döngü ve anlatıcı dostu seviye. ... ok"
+    },
+    {
+      "test": "test_v3_05_visual_continuity_and_opencv_anomalies",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Görsel devamlılık rehberi ve OpenCV siyah/boş/tekrar kare tespiti. ... ok"
+    },
+    {
+      "test": "test_v3_06_125_paragraph_script_dry_run_integration",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Gerçek 125 paragraflık senaryo ile v3_runner --dry-run doğrulaması. ... ok"
+    },
+    {
+      "test": "test_v3_07_real_30_minute_ffmpeg_e2e_assembly_and_integrity",
+      "mode": "REAL_LOCAL_FFMPEG_30MIN",
+      "passed": true,
+      "summary": "[REAL_LOCAL_FFMPEG_30MIN] Gerçek 30 dakikalık (1800 sn) 1080p/24fps MP4 + AAC + 160 sn siyah kapanış + SRT bütünlük testi. ... ERROR"
+    },
+    {
+      "test": "test_10_single_image_generation_and_validation",
+      "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+      "passed": true,
+      "summary": "[SIMULATED_GPU+REAL_LOCAL] Tek görsel üretim ve 1920x1080 geçerlilik testi. ... ok"
+    },
+    {
+      "test": "test_11_wrong_aspect_ratio_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Yanlış en-boy oranı (4:3) reddedilmeli. ... ok"
+    },
+    {
+      "test": "test_12_single_scene_svd_xt_simulated_gpu",
+      "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+      "passed": true,
+      "summary": "[SIMULATED_GPU+REAL_LOCAL] Tek sahne SVD-XT üretimi + CLIP/OpenCV/FFmpeg onay testi. ... ok"
+    },
+    {
+      "test": "test_13_clip_wrong_scene_rejected",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] CLIP yanlış sahne (düşük pozitif kosinüs) reddi testi. ... ok"
+    },
+    {
+      "test": "test_14_clip_human_figure_negative_risk_rejected",
+      "mode": "SIMULATED_GPU",
+      "passed": true,
+      "summary": "[SIMULATED_GPU] İnsan yüzü/figürü negatif kavram riski reddi testi. ... ok"
+    },
+    {
+      "test": "test_15_excessive_brightness_rejected",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Uyku için aşırı parlak gündüz sahnesi reddi testi. ... ok"
+    },
+    {
+      "test": "test_16_flicker_detection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Ani parlaklık sıçraması (flicker) tespiti testi. ... ok"
+    },
+    {
+      "test": "test_17_blur_detection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Karelerde bulanıklaşma (Laplacian keskinlik düşüşü) tespiti testi. ... ok"
+    },
+    {
+      "test": "test_18_morphing_drift_detection",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Aşırı şekil bozulması / morphing drift tespiti testi. ... ok"
+    },
+    {
+      "test": "test_19_three_failed_svd_attempts_never_approved",
+      "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+      "passed": true,
+      "summary": "[SIMULATED_GPU+REAL_LOCAL] P0-03 testi: 3 başarısız video denemesi ASLA kaydedilmez ve MANUAL_REVIEW olur. ... ok"
+    },
+    {
+      "test": "test_20_ping_pong_loop_generation",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Simetrik iç mekan sahnesi için ping-pong döngü testi. ... ok"
+    },
+    {
+      "test": "test_21_directional_motion_forward_crossfade_loop",
+      "mode": "REAL_LOCAL",
+      "passed": true,
+      "summary": "[REAL_LOCAL] Ateş/dalga/yağmur gibi yönlü hareketler için tersine dönmeyen ileri döngü testi. ... ok"
+    }
+  ],
+  "v3_platform_retest_elapsed_sec": 67.85
+}

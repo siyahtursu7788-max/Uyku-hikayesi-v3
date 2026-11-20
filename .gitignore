@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+uretim_ciktilari/
+loglar/
+*.log
+*.wav
+*.mp4
+*.mp3
+*.flac
+*.zip
+*.sha256
+_yedek_*
+.env

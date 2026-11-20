@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0.1-patched",
+  "generated_at": "2026-11-19T20:02:40.811037+00:00",
+  "environment": "Local CPU Sandbox (NO NVIDIA T4 GPU — live Colab T4 not executed from this VM)",
+  "v3_patched_tests": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "elapsed_sec": 27.45,
+    "tests": [
+      {
+        "name": "test_p01_real_zip_sha256_extract_idempotency_and_import",
+        "mode": "REAL_LOCAL",
+        "passed": true
+      },
+      {
+        "name": "test_p02_full_7_stage_integrated_pipeline_wiring",
+        "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+        "passed": true
+      },
+      {
+        "name": "test_p03_interruption_resume_and_fail_closed_gate",
+        "mode": "HYBRID_SIMULATED_GPU_AND_REAL_LOCAL",
+        "passed": true
+      }
+    ]
+  },
+  "dry_run_125_paragraphs_via_zip": {
+    "mode": "REAL_LOCAL",
+    "passed": true,
+    "paragraphs": 125,
+    "sentences": 522,
+    "planned_scenes": 21
+  },
+  "changed_files": {
+    "v3_runner.py": {
+      "old_sha256": "8279a65a41d819484c52b550319aff7b97ac668b2b304934e427f9a1bc745ca1",
+      "new_sha256": "de9d7a3e6b984bcc5e71af70791bef4f8cac2a8323d8d2d71f1234a9bcfd0d66"
+    },
+    "colab/cell_1_kurulum_ve_hazirlik.py": {
+      "old_sha256": "5634aab914dc9509cc1213c8988b50de68e44b1b292c0fd05383cc11a9863989",
+      "new_sha256": "6caa704615c3e145b24ef491d3890e057188c1928d78432182c3dc58aed47bf6"
+    },
+    "colab/cell_2_uretim_baslat_veya_devam.py": {
+      "old_sha256": "66f1a620b62f54e0c63ad80e8e116fe51a99ba9d005796821ef80cedf9b1205c",
+      "new_sha256": "edf48b0817eb65019b4293687587e3ea25098e8ef49056f76414fec503b5f5f5"
+    },
+    "V3_PATCHED_Colab_T4_Uretim.ipynb": {
+      "old_sha256": "de02363db0339446ca3b40db1ecb42e7970c758479e94aeaa74eabbe88e6e982",
+      "new_sha256": "9411eafad2208469a50d5b8af045718595de4f0783cf3862487bfad6bba7df50"
+    },
+    "uyku_v3/tests/test_v3_patched.py": {
+      "old_sha256": "NEW_FILE",
+      "new_sha256": "b1c4b80f37d1214fbe29ea516c3ad5f7729373795bbef3bf98d434dd2a30729d"
+    },
+    "UYKU_HIKAYESI_V3_PATCHED.zip": {
+      "old_sha256": "8cb54e8282f0be4d6e63307a635ed3d625cd5e9af17cfae0e95bb0077b551de5",
+      "new_sha256": "08deb4fc2c09776dbf43c4b9468257f7428655eb5476bdc3b04bb4c7f6e0fd10"
+    }
+  }
+}
